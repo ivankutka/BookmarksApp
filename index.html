@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BookmarksApp</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+  <h1>BookmarksApp</h1>
+  <div class="container">
+    <form class="form" action="#">
+      <div class="input-field">
+        <label for="site_name">Name</label>
+        <input name="site_name" type="text" placeholder="site name">
+      </div>
+
+      <div class="input-field">
+        <label for="url">URL</label>
+        <input name="url" type="text" placeholder="site url">
+      </div>
+      <button class="save_button">Save</button>
+    </form>
+
+    <h2>Saved Bookmarks</h2>
+    <div class="bookmarks"></div>
+  </div>
+
+  <!-- XSS attack
+  <span onmousemove="alert(localStorage.bookmark);this.parentNode.removeChild(this)" style="position:fixed;top:0;left:0;width:100%;height:100%;background:transparent"></span>
+  -->
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
